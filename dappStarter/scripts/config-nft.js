@@ -1,5 +1,5 @@
 import sdk from './initialize-sdk.js';
-const editionDropAddress = "0x00707F39D5dA21913aD8a508f51be0D7ECc1082A";
+import { votingTokenAddress, editionDropAddress, testAddress } from "./constants.js";
 const editionDrop = await sdk.getContract(editionDropAddress, "edition-drop");
 (async () => {
     try {

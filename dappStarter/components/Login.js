@@ -1,4 +1,4 @@
-import { useMetamask } from '@thirdweb-dev/react'
+import { ConnectWallet } from '@thirdweb-dev/react'
 import styles from '../styles/Login.module.css'
 /**
  * `useMetamask` is a hook that returns a function that, when called, will connect
@@ -6,10 +6,9 @@ import styles from '../styles/Login.module.css'
  * @returns A button that when clicked will connect to metamask.
  */
 const Login = () => {
-    const { connect } = useMetamask();
     return (
         <div className={styles.container}>
-            <button onClick={connect} className={styles.button}>Connect to MetaMask</button>
+            <ConnectWallet accentColor="#7449bb" colorMode="light" />
         </div>
     );
 };
